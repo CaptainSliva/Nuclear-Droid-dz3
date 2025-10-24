@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">NuclearDz3</string>
+
+    <string name="title_a">Activity A</string>
+    <string name="title_b">Activity B</string>
+    <string name="title_c">Activity C</string>
+
+    <string name="open_a">Open activity A</string>
+    <string name="open_b">Open activity B</string>
+    <string name="open_c">Open activity C</string>
+    <string name="generate_color">Generate color</string>
+
+    <string name="hint_color">#RRGGBB</string>
+
+
 </resources>

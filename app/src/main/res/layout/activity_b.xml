@@ -2,45 +2,29 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:background="@color/base_color_a"
+    android:id="@+id/mainB"
+    android:background="@color/base_color_b"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:keepScreenOn="true">
+    tools:context=".ActivityB">
+
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize"
-        android:text="@string/title_a"
+        android:text="@string/title_b"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/et_color"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="16dp"
-        android:hint="@string/hint_color"
-        android:inputType="textNoSuggestions"
-        android:textColor="@color/m3_default_color_primary_text"
-        app:layout_constraintBottom_toTopOf="@+id/b_color_gen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </EditText>
-
     <Button
-        android:id="@+id/b_color_gen"
+        android:id="@+id/b_open_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/generate_color"
+        android:text="@string/open_c"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,16 +32,16 @@
 
     </Button>
 
-    <Button
-        android:id="@+id/b_open_b"
+    <TextView
+        android:id="@+id/tv_hex_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/open_b"
+        android:layout_marginBottom="8dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b_color_gen">
+        app:layout_constraintStart_toStartOf="parent">
 
-    </Button>
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
