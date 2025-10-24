@@ -86,28 +86,7 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-//        val keyguardManager = getSystemService(KEYGUARD_SERVICE) as KeyguardManager
-//        keyguardManager.requestDismissKeyguard(this, null)
-//        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-//        setShowWhenLocked(true)
-//
-//        val lock =
-//            (getSystemService(KEYGUARD_SERVICE) as KeyguardManager).newKeyguardLock(KEYGUARD_SERVICE)
-//        val powerManager = (getSystemService(POWER_SERVICE) as PowerManager)
-//        val wake = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK or
-//                PowerManager.ACQUIRE_CAUSES_WAKEUP,
-//            "TAG")
-//
-//        lock.disableKeyguard()
-//        wake.acquire(5000)
-//
-//        window.addFlags(
-//            (WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-//                    or WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-//                    or WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-//                    or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
-//                    or WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON)
-//        )
+
     }
 
     override fun onResume() {
