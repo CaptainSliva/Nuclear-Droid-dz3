@@ -45,7 +45,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.bOpenB.setOnClickListener {
 
-            color = functionsApp.parseColor(etColor.text.toString())
+            try {
+                color = functionsApp.parseColor(etColor.text.toString())
+            }catch (e: Exception) {
+                etColor.setTextColor(getColor(R.color.red))
+            }
 
             val intent = Intent(this, ActivityB::class.java)
                 .setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
@@ -79,7 +83,11 @@ class MainActivity : AppCompatActivity() {
                 count: Int
             ) {
                 if (functionsApp.changeTextColor(applicationContext, etColor, s.toString())) {
-                    color = functionsApp.parseColor(s.toString())
+                    try {
+                        color = functionsApp.parseColor(s.toString())
+                    }catch (e: Exception) {
+                        etColor.setTextColor(getColor(R.color.red))
+                    }
                 }
                 else color = 0
             }
