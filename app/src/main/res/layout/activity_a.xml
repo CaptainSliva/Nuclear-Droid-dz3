@@ -6,7 +6,7 @@
     android:background="@color/base_color_a"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ActivityA"
     android:keepScreenOn="true">
 
     <TextView
