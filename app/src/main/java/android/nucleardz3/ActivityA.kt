@@ -2,20 +2,18 @@ package android.nucleardz3
 
 import android.app.KeyguardManager
 import android.content.Intent
+import android.nucleardz3.FunctionsApp.changeTextColor
+import android.nucleardz3.FunctionsApp.generateColor
+import android.nucleardz3.FunctionsApp.keyIntentColor
+import android.nucleardz3.FunctionsApp.parseColor
 import android.nucleardz3.databinding.ActivityABinding
 import android.os.Bundle
-import android.os.PowerManager
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.toColorInt
-import utils.functionsApp.changeTextColor
-import utils.functionsApp.generateColor
-import utils.functionsApp.keyIntentColor
-import utils.functionsApp.parseColor
 
 
 class ActivityA : AppCompatActivity() {
@@ -35,28 +33,12 @@ class ActivityA : AppCompatActivity() {
         setContentView(binding.root)
 
         val keyguardManager = getSystemService(KEYGUARD_SERVICE) as KeyguardManager
-        keyguardManager.requestDismissKeyguard(this, null)
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        setShowWhenLocked(true)
-
-        val lock =
-            (getSystemService(KEYGUARD_SERVICE) as KeyguardManager).newKeyguardLock(KEYGUARD_SERVICE)
-        val powerManager = (getSystemService(POWER_SERVICE) as PowerManager)
-        val wake = powerManager.newWakeLock(
-            PowerManager.FULL_WAKE_LOCK or
-                PowerManager.ACQUIRE_CAUSES_WAKEUP,
-            "TAG")
-
         window.addFlags(
-            (WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-            or WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-            or WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-            or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
-            or WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON)
-        )
+            WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON)
 
-        lock.disableKeyguard()
-        wake.acquire(5000)
+        keyguardManager.requestDismissKeyguard(this, null)
+        this.setTurnScreenOn(true)
+        this.setShowWhenLocked(true)
 
         val etColor = binding.etColor
         etColor.setTextColor(getColor(com.google.android.material.R.color.m3_default_color_primary_text))

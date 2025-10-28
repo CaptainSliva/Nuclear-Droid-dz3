@@ -1,12 +1,11 @@
-package utils
+package android.nucleardz3
 
 import android.content.Context
 import android.graphics.Color
-import android.nucleardz3.R
 import android.widget.EditText
 import androidx.core.graphics.toColorInt
 
-object functionsApp {
+object FunctionsApp {
     val keyIntentColor = "COLOR"
     fun generateColor(): Int {
         val randomR = (0..255).random()

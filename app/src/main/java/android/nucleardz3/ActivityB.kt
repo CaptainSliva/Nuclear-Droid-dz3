@@ -2,6 +2,7 @@ package android.nucleardz3
 
 import android.content.Intent
 import android.graphics.Color
+import android.nucleardz3.FunctionsApp.keyIntentColor
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +16,6 @@ import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import utils.functionsApp.keyIntentColor
 import kotlin.text.toHexString
 
 class ActivityB : AppCompatActivity() {
